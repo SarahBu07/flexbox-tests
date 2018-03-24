@@ -1,0 +1,60 @@
+html, body {
+  font-family: Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: #fff;
+}
+
+.flex-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  padding: 25px 0 25px 0;
+}
+.child {
+  height: 295px;
+  margin:0 0 25px 0;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  font-size: 3em; 
+  line-height: 280px;
+  margin-top: 20px;
+  
+}
+.child-twoCol {
+  width:100%;
+  background: #329cf7;
+  animation: colorplay 8s linear infinite;
+}
+.child-oneCol {
+  flex: 1 100%;
+  background: #60aaeb;
+}
+
+/* responsive screen wilder than 480 */
+
+@media screen and (min-width:60rem) {
+  .flex-parent {
+    width: 60rem;
+  }
+}
+
+@media screen and (min-width:480px) {
+  .child-twoCol {
+    width:48%;
+  }
+}
+
+/* bkg colors animation */
+
+@keyframes colorplay {
+  0% {background: #60aaeb;}
+  5% {background: hsl(208, 78%, 65%);}
+  50% {background: hsl(242, 86%, 57%);}
+  60% {background: hsl(242, 86%, 57%);}
+  100% {background: hsl(208, 78%, 65%);}
+}
